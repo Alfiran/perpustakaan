@@ -41,12 +41,9 @@ class BookController extends Controller
      * @apiName GetBook
      * @apiGroup Book
      *
-     * @apiParam {Number} id id_contact
-     * @apiSuccess {Number} id id_contact
-     * @apiSuccess {Varchar} name name of book
-     * @apiSuccess {Varchar} address name of address
-     * @apiSuccess {Varchar} email email of book
-     * @apiSuccess {Number} phone phone of book
+     * @apiSuccess {Varchar} kode_buku of books
+     * @apiSuccess {Varchar} judul of books
+     * @apiSuccess {Varchar} pengarang of books
      */
     public function show($id)
     {
@@ -59,10 +56,9 @@ class BookController extends Controller
      * @apiGroup Book
      *
      *
-     * @apiParam {Varchar} name name of book
-     * @apiParam {Varchar} email email of book
-     * @apiParam {Varchar} address email of address
-     * @apiParam {Float} phone phone of book
+     * @apiParam {Varchar} kode_buku of books
+     * @apiParam {Varchar} judul of books
+     * @apiParam {Varchar} pengarang of books
      * @apiSuccess {Number} id id of book
      */
     public function store(BookCreateRequest $request)
@@ -76,10 +72,9 @@ class BookController extends Controller
      * @apiGroup Book
      *
      *
-     * @apiParam {Varchar} name name of book
-     * @apiParam {Varchar} email email of book
-     * @apiParam {Varchar} address address of book
-     * @apiParam {Float} phone phone of book
+     * @apiParam {Varchar} kode_buku of books
+     * @apiParam {Varchar} judul of books
+     * @apiParam {Varchar} pengarang of books
      *
      *
      * @apiError EmailHasRegitered The Email must diffrerent.
