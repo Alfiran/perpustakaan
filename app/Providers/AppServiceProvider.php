@@ -31,5 +31,9 @@ class AppServiceProvider extends ServiceProvider
         $this->app->when('App\Http\Controllers\BookController')
             ->needs('App\Domain\Contracts\BookInterface')
             ->give('App\Domain\Repositories\BookRepository');
+
+        $this->app->when('App\Http\Controllers\TransactionController')
+            ->needs('App\Domain\Contracts\TransactionInterface')
+            ->give('App\Domain\Repositories\TransactionRepository');
     }
 }
