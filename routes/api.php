@@ -19,3 +19,4 @@ Route::get('/user', function (Request $request) {
 
 Route::resource('contacts','ContactController');
 Route::resource('books','BookController');
+Route::resource('transactions','TransactionController');
