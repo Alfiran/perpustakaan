@@ -19,5 +19,16 @@ class Transaction extends Model
     protected $fillable = [
         'book_id', 'user_id', 'petugas','status','expired_at',
     ];
+    protected $with=['user','book'];
+    public function user()
+    {
+        return $this->belongsTo('App\Domain\Entities\User', 'user_id');
+        
+    }
+    public function book()
+    {
+        return $this->belongsTo('App\Domain\Entities\Book', 'book_id');
+        
+    }
 
 }
