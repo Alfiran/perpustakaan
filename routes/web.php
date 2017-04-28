@@ -27,7 +27,7 @@ Route::get('/list-user', function () {
     return view('pages.list-user');
 })->name('page.list-user');
 
-Route::get('/transaksi/create', function () {
+Route::get('/create-transaksi', function () {
     return view('pages.create-transaksi');
 })->name('page.create-transaksi');
 
