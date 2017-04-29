@@ -101,8 +101,8 @@
                 $('#nav-list-user').removeClass('active');
                 $('#nav-list-book').addClass('active');
                 break;  
-            case '/list-user':
-            case '/create-user':
+            case '/users':
+            case '/users/create':
                 $('#nav-dashboard').removeClass('active');
                 $('#nav-list-transaksi').removeClass('active');
                 $('#nav-list-book').removeClass('active');
