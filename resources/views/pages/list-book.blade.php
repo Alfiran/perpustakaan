@@ -13,7 +13,7 @@
                   <div class="row">
                     <div class="col-md-8 pull-left">
                       <div class="font-icon-list">
-                        <a class="btn btn-default submit" href="create-book">
+                        <a class="btn btn-default submit" href={{route('page.create-book')}}>
                           <i class="pe-7s-plus"></i>
                         </a>
                         <button class="btn btn-default submit">
@@ -43,7 +43,7 @@
                           <td>Hujan</td>
                           <td>Tere Liye</td>
                           <td>
-                            <a class="btn btn-default" href="edit-book">
+                            <a class="btn btn-default" href={{route('page.edit-book')}}>
                               <i class="pe-7s-pen"></i>
                             </a>
                             <button class="btn btn-danger">
@@ -57,7 +57,7 @@
                           <td>Pukat</td>
                           <td>Minerva Hooper</td>
                           <td>
-                           <a class="btn btn-default" href="edit-book">
+                           <a class="btn btn-default" href={{route('page.edit-book')}}>
                               <i class="pe-7s-pen"></i>
                             </a>
                             <button class="btn btn-danger">
@@ -71,7 +71,7 @@
                           <td>Supernova</td>
                           <td>Sage Rodriguez</td>
                           <td>
-                            <a class="btn btn-default" href="edit-book">
+                            <a class="btn btn-default" href={{route('page.edit-book')}}>
                               <i class="pe-7s-pen"></i>
                             </a>
                             <button class="btn btn-danger">
@@ -85,7 +85,7 @@
                           <td>Sepotong hati yang baru</td>
                           <td>Philip Chaney</td>
                           <td>
-                            <a class="btn btn-default" href="edit-book">
+                            <a class="btn btn-default" href={{route('page.edit-book')}}>
                               <i class="pe-7s-pen"></i>
                             </a>
                             <button class="btn btn-danger">
@@ -99,7 +99,7 @@
                           <td>Negeri 5 menara</td>
                           <td>Doris Greene</td>
                           <td>
-                           <a class="btn btn-default" href="edit-book">
+                           <a class="btn btn-default" href={{route('page.edit-book')}}>
                               <i class="pe-7s-pen"></i>
                             </a>
                             <button class="btn btn-danger">
@@ -113,7 +113,7 @@
                           <td>Alice in Wonderland</td>
                           <td>Mason Porter</td>
                           <td>
-                            <a class="btn btn-default" href="edit-book">
+                            <a class="btn btn-default" href={{route('page.edit-book')}}>
                               <i class="pe-7s-pen"></i>
                             </a>
                             <button class="btn btn-danger">
