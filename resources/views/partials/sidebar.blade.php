@@ -14,8 +14,8 @@
                             <p>Dashboard</p>
                         </a>
                     </li>
-                    <li class="" id="nav-list-transaksi">
-                        <a href={{route('page.list-transaksi')}}>
+                    <li class="" id="nav-list-transaction">
+                        <a href={{route('page.list-transaction')}}>
                             <i class="pe-7s-note2"></i>
                             <p>Transaksi</p>
                         </a>

@@ -1,19 +1,19 @@
 @extends('layouts.app')
-@section('title', 'List Book')
+@section('title', 'List Transaksi')
 @section('content')
-<div class="container-fluid">
+    <div class="container-fluid">
           <div class="row">
             <div class="col-md-12">
               <div class="card">
 
                 <div class="header">
-                  <h4 class="title">List Book</h4>
+                  <h4 class="title">List Transaksi</h4>
                 </div>
                 <div class="content">
                   <div class="row">
                     <div class="col-md-8 pull-left">
                       <div class="font-icon-list">
-                        <a class="btn btn-default submit" href={{route('page.create-book')}}>
+                        <a class="btn btn-default submit" href={{route('page.create-transaction')}}>
                           <i class="pe-7s-plus"></i>
                         </a>
                         <button class="btn btn-default submit">
@@ -30,20 +30,22 @@
                   <div class="table-responsive table-full-width">
                     <table class="table table-hover table-striped">
                       <thead>
-                        <th>Kode Buku</th>
-                        <th>Judul</th>
-                        <th>Pengarang</th>
+                        <th>Buku</th>
+                        <th>transactions</th>
+                        <th>Petugas</th>
+                        <th>Status</th>
+                        <th>Tanggal Kembali</th>
                         <th>Aksi</th>
                       </thead>
                       <tbody>
-                      @foreach ($books as $book)
+                         @foreach ($transactions as $transaction)
                           <tr>
-                            <td>{{ $book->kode_buku }}</td>
-                            <td>{{ $book->judul }}</td>
-                            <td>{{ $book->pengarang }}</td>
-                            <td>{{ $book->aksi }}</td>
+                            <td>{{ $transaction->book_id }}</td>
+                            <td>{{ $transaction->user_id }}</td>
+                            <td>{{ $transaction->petugas }}</td>
+                            <td>{{ $transaction->status }}</td>
                             <td>
-                              <a class="btn btn-default" href={{route('page.edit-book',['id' => $book->id])}}>
+                              <a class="btn btn-default" href={{route('page.edit-transaction',['id' => $transaction->id])}}>
                                 <i class="pe-7s-pen"></i>
                               </a>
                               <button class="btn btn-danger">
@@ -61,6 +63,7 @@
             </div>
           </div>
         </div>
+
 @endsection
 @section('scripts')
 @endsection

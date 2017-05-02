@@ -82,29 +82,29 @@
         console.log('url path =>',pathname);
         switch (pathname) {
             case '/':
-                $('#nav-list-transaksi').removeClass('active');
+                $('#nav-list-transaction').removeClass('active');
                 $('#nav-list-book').removeClass('active');
                 $('#nav-list-user').removeClass('active');
                 $('#nav-dashboard').addClass('active');
                 break; 
-            case '/list-transaksi':
-            case '/create-transaksi':
+            case '/transactions':
+            case '/transactions/create':
                 $('#nav-dashboard').removeClass('active');
                 $('#nav-list-book').removeClass('active');
                 $('#nav-list-user').removeClass('active');
-                $('#nav-list-transaksi').addClass('active');
+                $('#nav-list-transaction').addClass('active');
                 break; 
-            case '/list-book':
-            case '/create-book':
+            case '/books':
+            case '/books/create':
                 $('#nav-dashboard').removeClass('active');
-                $('#nav-list-transaksi').removeClass('active');
+                $('#nav-list-transaction').removeClass('active');
                 $('#nav-list-user').removeClass('active');
                 $('#nav-list-book').addClass('active');
                 break;  
             case '/users':
             case '/users/create':
                 $('#nav-dashboard').removeClass('active');
-                $('#nav-list-transaksi').removeClass('active');
+                $('#nav-list-transaction').removeClass('active');
                 $('#nav-list-book').removeClass('active');
                  $('#nav-list-user').addClass('active');
                 break;  

@@ -19,26 +19,10 @@ Route::get('/users','Pages\UserController@index')->name('page.list-user');
 Route::get('/users/create','Pages\UserController@create')->name('page.create-user');
 Route::get('/users/{id}/edit','Pages\UserController@edit')->name('page.edit-user');
 
-Route::get('/list-transaksi', function () {
-    return view('pages.list-transaksi');
-})->name('page.list-transaksi');
+Route::get('/books','Pages\BookController@index')->name('page.list-book');
+Route::get('/books/create','Pages\BookController@create')->name('page.create-book');
+Route::get('/books/{id}/edit','Pages\BookController@edit')->name('page.edit-book');
 
-Route::get('/list-book', function () {
-    return view('pages.list-book');
-})->name('page.list-book');
-
-Route::get('/create-transaksi', function () {
-    return view('pages.create-transaksi');
-})->name('page.create-transaksi');
-
-Route::get('/create-book', function () {
-    return view('pages.create-book');
-})->name('page.create-book');
-
-Route::get('/edit-transaksi', function () {
-    return view('pages.edit-transaksi');
-})->name('page.edit-transaksi');
-
-Route::get('/edit-book', function () {
-    return view('pages.edit-book');
-})->name('page.edit-book');
+Route::get('/transactions','Pages\TransactionController@index')->name('page.list-transaction');
+Route::get('/transactions/create','Pages\TransactionController@create')->name('page.create-transaction');
+Route::get('/transactions/{id}/edit','Pages\TransactionController@edit')->name('page.edit-transaction');
