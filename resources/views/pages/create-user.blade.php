@@ -1,9 +1,17 @@
 @extends('layouts.app')
-@section('title', 'List Book')
+@section('title', 'Create User')
 @section('content')
 <div class="container-fluid">
           <div class="row">
             <div class="col-md-8">
+             <div class="alert alert-dismissible hide" id="errMsg" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <span id="errData"></span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+          <div class="col-md-8">
               <div class="card">
                 <div class="header">
                   <h4 class="title">Create User</h4>
@@ -56,7 +64,7 @@
                       <br>
                       <button class="btn btn-default submit" id="btnSimpan">Simpan</button>
                       <button class="btn btn-default submit" id="btnSimpanKembali">Simpan & Kembali</button>
-                      <a class="btn btn-default submit" route={{route('page.list-book')}}>Kembali</a>
+                      <a class="btn btn-default submit" route={{route('page.list-user')}}>Kembali</a>
                     </div>
                     <hr>
                    
@@ -88,6 +96,9 @@
         success: function( data, textStatus, jQxhr ){
             console.log('status =>', textStatus);
             console.log('data =>', data);
+            // clear validation error messsages
+            $('#errMsg').addClass('hide');
+            $('#errData').html('');
             // scroll up
             // $('html, body').animate({
             //     scrollTop: $("#nav-top").offset().top
@@ -99,17 +110,21 @@
             // kembali kelist book
         },
         error: function( data, textStatus, errorThrown ){
-          console.log('data', data.responseText);
+          var messages = jQuery.parseJSON(data.responseText);
             console.log( errorThrown );
             // $('html, body').animate({
             //     scrollTop: $("#nav-top").offset().top
             // }, 2000);
             // scroll up 
             // tampilkan pesan error
-            $('#errMsg').toggleClass('hide');
-            $('#errMsg').addClass('alert-warning');
-            
-            // jangan clear data
+             $('#errData').html('');
+          $('#errMsg').addClass('alert-warning');
+          $('#errMsg').removeClass('hide');
+          $.each(messages, function(i, val) {
+            $('#errData').append('<p>'+ i +' : ' + val +'</p>')
+            console.log(i,val);
+          });          
+          // jangan clear data
         }
       });
     });
