@@ -3,6 +3,7 @@
 namespace App\Http\Requests\Book;
 
 use App\Http\Requests\Request;
+use Illuminate\Contracts\Validation\Validator;
 
 /**
  * Class UserCreateRequest
@@ -27,7 +28,7 @@ class BookCreateRequest extends Request
      * @var array
      */
     protected $attrs = [
-        'kode_buku'    => 'Kode_buku',
+        'kode_buku'    => 'Kode buku',
         'judul'   => 'Judul',
         'pengarang' => 'Pengarang',
     ];
