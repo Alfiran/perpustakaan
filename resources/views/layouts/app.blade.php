@@ -30,6 +30,8 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
     <link href={{asset('assets/css/pe-icon-7-stroke.css')}} rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href={{asset('assets/css/sweetalert.css')}}>
+    
 @yield('styles')
 </head>
 
@@ -75,6 +77,8 @@
 
 <!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
 <script src={{asset('assets/js/demo.js')}}></script>
+
+<script src={{asset('assets/js/sweetalert.min.js')}}></script>
 
 <script>
     $(document).ready(function(){
