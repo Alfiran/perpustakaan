@@ -42,7 +42,11 @@
                             <td>{{ $user->class }}</td>
                             <td>{{ $user->address }}</td>
                             <td>{{ $user->phone }}</td>
-                            <td>{{ $user->level }}</td>
+                            <td>
+                              @if($user->level == 1)
+                                <span class="label label-primary">Administrator</span>
+                              @endif
+                            </td>
                             <td>
                               <a class="btn btn-default" href={{route('page.edit-user',['id' => $user->id])}}>
                                 <i class="pe-7s-pen"></i>
