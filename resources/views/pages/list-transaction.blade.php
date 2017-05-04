@@ -40,7 +40,7 @@
                       <tbody>
                          @foreach ($transactions as $transaction)
                           <tr>
-                            <td>{{ $transaction->book_id }}</td>
+                            <td>{{ $transaction->book->judul }}</td>
                             <td>{{ $transaction->user_id }}</td>
                             <td>{{ $transaction->petugas }}</td>
                             <td>{{ $transaction->status }}</td>

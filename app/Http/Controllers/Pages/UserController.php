@@ -32,12 +32,12 @@ class UserController extends Controller
 
     public function create()
     {
+        $user = $this->user->findById($id);
         return view('pages.create-user'); 
     }
 
     public function edit($id)
     {
-        $user = $this->user->findById($id);
         return view('pages.edit-user',compact('user')); 
     }
     public function getList()

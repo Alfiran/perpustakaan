@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Dashboard')
+@section('title', 'Create Transaksi')
 @section('content')
         <div class="container-fluid">
           <div class="row">
@@ -26,8 +26,11 @@
                       <div class="col-md-12">
                         <div class="form-group">
                           <label>Peminjam</label>
-                          <input type="text" name="nama_peminjan" class="form-control" placeholder="Nama Peminjam" readonly>
-                          <input type="hidden"  name="nama_peminjan" class="form-control" name="user_id">
+                         <select class="form-control" id="idusers" name="user_id">
+                            @foreach($users as $user)
+                              <option value="{{$user->id}}">{{$user->name}}</option>
+                            @endforeach
+                          </select>
                         </div>
                       </div>
                     </div>
@@ -68,6 +71,7 @@
  <script>
     $(document).ready(function(){
      $('#idbooks').select2();
+     $('#idusers').select2();
     });
 
     // ini adalah proses submit data menggunakan Ajax

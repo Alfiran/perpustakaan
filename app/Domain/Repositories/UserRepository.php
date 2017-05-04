@@ -21,11 +21,11 @@ class UserRepository extends AbstractRepository implements UserInterface, Crudab
 
     /**
      * UserRepository constructor.
-     * @param User $contact
+     * @param User $user
      */
-    public function __construct(User $contact)
+    public function __construct(User $user)
     {
-        $this->model = $contact;
+        $this->model = $user;
     }
 
     /**
@@ -104,15 +104,15 @@ class UserRepository extends AbstractRepository implements UserInterface, Crudab
     }
     public function getList()
     {
-        // query to aql
-        $akun = $this->model->get()->toArray();
+       // query to aql
+        $users = $this->model->all();
         // if data null
-        if (null == $akun) {
+        if (null == $users) {
             // set response header not found
             return $this->errorNotFound('Data belum tersedia');
         }
 
-        return $akun;
+        return $users;
 
     }
 }
