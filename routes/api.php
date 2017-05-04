@@ -20,3 +20,6 @@ Route::get('/user', function (Request $request) {
 Route::resource('books','BookController');
 Route::resource('transactions','TransactionController');
 Route::resource('users','UserController');
+// Route::get('getList-books','BookController@getList');
+Route::get('/getlist-books','Pages\BookController@getList')->name('api.getlist-books');
+Route::get('/getlist-users','Pages\UserController@getList')->name('api.getlist-users');

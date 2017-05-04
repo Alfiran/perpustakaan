@@ -31,6 +31,7 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
     <link href={{asset('assets/css/pe-icon-7-stroke.css')}} rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href={{asset('assets/css/sweetalert.css')}}>
+    <link rel="stylesheet" type="text/css" href={{asset('assets/css/select2.min.css')}}>
     
 @yield('styles')
 </head>
@@ -79,6 +80,8 @@
 <script src={{asset('assets/js/demo.js')}}></script>
 
 <script src={{asset('assets/js/sweetalert.min.js')}}></script>
+
+<script src={{asset('assets/js/select2.min.js')}}></script>
 
 <script>
     $(document).ready(function(){

@@ -40,5 +40,8 @@ class UserController extends Controller
         $user = $this->user->findById($id);
         return view('pages.edit-user',compact('user')); 
     }
-
+    public function getList()
+    {
+        return $this->user->getList();
+    }
 }

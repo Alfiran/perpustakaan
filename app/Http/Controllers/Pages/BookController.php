@@ -37,8 +37,11 @@ class BookController extends Controller
 
     public function edit($id)
     {
-        $book = $this->book->findById($id);
+        $books = $this->book->findById($id);
         return view('pages.edit-book',compact('book')); 
     }
-
+    public function getList()
+    {
+        return $this->book->getList();
+    }
 }

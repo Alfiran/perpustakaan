@@ -98,5 +98,18 @@ class BookRepository extends AbstractRepository implements BookInterface, Crudab
     {
         return parent::find($id, $columns);
     }
+    
+    public function getList()
+    {
+        // query to aql
+        $books = $this->model->all();
+        // if data null
+        if (null == $books) {
+            // set response header not found
+            return $this->errorNotFound('Data belum tersedia');
+        }
 
+        return $books;
+
+    }
 }
