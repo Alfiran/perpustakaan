@@ -31,7 +31,6 @@ class TransactionCreateRequest extends Request
         'user_id'    => 'User_id',
         'petugas'    => 'Petugas',
         'status'     => 'Status',
-        'expired_at' => 'expired_at',
     ];
 
     /**
@@ -46,7 +45,6 @@ class TransactionCreateRequest extends Request
             'user_id'    => 'required|max:225',
             'petugas'    => 'required|max:60',
             'status'     => 'required|max:225',
-            'expired_at' => 'required|max:225',
         ];
     }
 

@@ -62,7 +62,7 @@ class TransactionRepository extends AbstractRepository implements TransactionInt
             'user_id'   => e($data['user_id']),
             'petugas' => e($data['petugas']),
             'status'   => e($data['status']),
-            'expired_at'   => e($data['expired_at'])
+            'expired_at'   =>  \Carbon\Carbon::now()->addDays(7),
         ]);
 
     }
@@ -78,8 +78,7 @@ class TransactionRepository extends AbstractRepository implements TransactionInt
             'book_id'    => e($data['book_id']),
             'user_id'   => e($data['user_id']),
             'petugas' => e($data['petugas']),
-            'status'   => e($data['status']),
-            'expired_at'   => e($data['expired_at'])
+            'status'   => e($data['status']),            
         ]);
     }
 

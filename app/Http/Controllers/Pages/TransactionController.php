@@ -49,7 +49,11 @@ class TransactionController extends Controller
 
     public function edit($id)
     {
-        return view('pages.edit-transaction'); 
+        $books = $this->book->getList();
+        $users = $this->user->getList();
+        $transaction = $this->transaction->findById($id);
+        $arr= [$books, $users, $transaction];
+        return view('pages.edit-transaction',compact('books','users','transaction',$arr)); 
     }
 
 }

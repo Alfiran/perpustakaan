@@ -44,6 +44,7 @@
                             <td>{{ $transaction->user_id }}</td>
                             <td>{{ $transaction->petugas }}</td>
                             <td>{{ $transaction->status }}</td>
+                            <td>{{ $transaction->expired_at }}</td>
                             <td>
                               <a class="btn btn-default" href={{route('page.edit-transaction',['id' => $transaction->id])}}>
                                 <i class="pe-7s-pen"></i>
