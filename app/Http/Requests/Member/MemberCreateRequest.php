@@ -1,19 +1,19 @@
 <?php
 
-namespace App\Http\Requests\User;
+namespace App\Http\Requests\Member;
 
 use App\Http\Requests\Request;
 use Illuminate\Contracts\Validation\Validator;
 
 /**
- * Class UserCreateRequest
+ * Class MemberCreateRequest
  *
- * @package App\Http\Requests\User
+ * @package App\Http\Requests\Member
  */
-class UserCreateRequest extends Request
+class MemberCreateRequest extends Request
 {
     /**
-     * Determine if the user is authorized to make this request.
+     * Determine if the member is authorized to make this request.
      *
      * @return bool
      */

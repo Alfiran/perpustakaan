@@ -3,25 +3,25 @@
 namespace App\Domain\Repositories;
 
 use App\Domain\Entities\User;
-use App\Domain\Contracts\UserInterface;
+use App\Domain\Contracts\MemberInterface;
 use App\Domain\Contracts\Crudable;
 
 
 /**
- * Class UserRepository
+ * Class MemberRepository
  * @package App\Domain\Repositories
  */
-class UserRepository extends AbstractRepository implements UserInterface, Crudable
+class MemberRepository extends AbstractRepository implements MemberInterface, Crudable
 {
 
     /**
-     * @var User
+     * @var Member
      */
     protected $model;
 
     /**
-     * UserRepository constructor.
-     * @param User $user
+     * MemberRepository constructor.
+     * @param Member $member
      */
     public function __construct(User $user)
     {
@@ -105,14 +105,14 @@ class UserRepository extends AbstractRepository implements UserInterface, Crudab
     public function getList()
     {
        // query to aql
-        $users = $this->model->all();
+        $members = $this->model->all();
         // if data null
-        if (null == $users) {
+        if (null == $members) {
             // set response header not found
             return $this->errorNotFound('Data belum tersedia');
         }
 
-        return $users;
+        return $members;
 
     }
 }

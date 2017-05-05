@@ -55,10 +55,10 @@
 @section('scripts')
 <script>
   $(document).ready(function(){
-    // aktifkan class nav user
+    // aktifkan class nav member
     $('#nav-dashboard').removeClass('active');
     $('#nav-list-transaction').removeClass('active');
-    $('#nav-list-user').removeClass('active');
+    $('#nav-list-member').removeClass('active');
     $('#nav-list-book').addClass('active');
   });
 </script>

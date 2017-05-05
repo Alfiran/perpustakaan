@@ -6,7 +6,7 @@ use App\Http\Requests\Transaction\TransactionCreateRequest;
 use Illuminate\Http\Request;
 use App\Domain\Repositories\TransactionRepository;
 use App\Domain\Repositories\BookRepository;
-use App\Domain\Repositories\UserRepository;
+use App\Domain\Repositories\MemberRepository;
 use App\Http\Controllers\Controller;
 
 class TransactionController extends Controller
@@ -25,7 +25,7 @@ class TransactionController extends Controller
      * TransactionController constructor.
      * @param TransactionRepository $transactions
      */
-    public function __construct(TransactionRepository $transaction, BookRepository $book, UserRepository $user)
+    public function __construct(TransactionRepository $transaction, BookRepository $book, MemberRepository $user)
     {
         $this->transaction = $transaction;
         $this->book = $book;

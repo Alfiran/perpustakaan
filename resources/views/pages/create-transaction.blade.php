@@ -49,8 +49,8 @@
                         <div class="form-group">
                           <label>Peminjam</label>
                          <select class="form-control" id="idusers" name="user_id">
-                            @foreach($users as $user)
-                              <option value="{{$user->id}}">{{$user->name}}</option>
+                            @foreach($users as $member)
+                              <option value="{{$member->id}}">{{$member->name}}</option>
                             @endforeach
                           </select>
                         </div>

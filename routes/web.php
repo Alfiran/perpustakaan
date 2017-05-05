@@ -15,9 +15,9 @@ Route::get('/', function () {
     return view('pages.dashboard');
 })->name('page.dashboard');
 
-Route::get('/users','Pages\UserController@index')->name('page.list-user');
-Route::get('/users/create','Pages\UserController@create')->name('page.create-user');
-Route::get('/users/{id}/edit','Pages\UserController@edit')->name('page.edit-user');
+Route::get('/members','Pages\MemberController@index')->name('page.list-member');
+Route::get('/members/create','Pages\MemberController@create')->name('page.create-member');
+Route::get('/members/{id}/edit','Pages\MemberController@edit')->name('page.edit-member');
 
 Route::get('/books','Pages\BookController@index')->name('page.list-book');
 Route::get('/books/create','Pages\BookController@create')->name('page.create-book');

@@ -82,17 +82,17 @@
 @section('scripts')
 <script>
   $(document).ready(function(){
-    // aktifkan class nav user
+    // aktifkan class nav member
     $('#nav-dashboard').removeClass('active');
     $('#nav-list-book').removeClass('active');
-    $('#nav-list-user').removeClass('active');
+    $('#nav-list-member').removeClass('active');
     $('#nav-list-transaction').addClass('active');
   });
 </script>
 <script>
  $(document).ready(function(){
      $('#idbooks').select2();
-     $('#idusers').select2();
+     $('#idmembers').select2();
      $('#idstatus').select2();
     });
 

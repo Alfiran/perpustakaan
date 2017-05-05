@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\User;
+use App\Member;
 use Validator;
 use App\Http\Controllers\Controller;
-use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Foundation\Auth\RegistersMembers;
 
 class RegisterController extends Controller
 {
@@ -14,16 +14,16 @@ class RegisterController extends Controller
     | Register Controller
     |--------------------------------------------------------------------------
     |
-    | This controller handles the registration of new users as well as their
+    | This controller handles the registration of new members as well as their
     | validation and creation. By default this controller uses a trait to
     | provide this functionality without requiring any additional code.
     |
     */
 
-    use RegistersUsers;
+    use RegistersMembers;
 
     /**
-     * Where to redirect users after login / registration.
+     * Where to redirect members after login / registration.
      *
      * @var string
      */
@@ -49,20 +49,20 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => 'required|max:255',
-            'email' => 'required|email|max:255|unique:users',
+            'email' => 'required|email|max:255|unique:members',
             'password' => 'required|min:6|confirmed',
         ]);
     }
 
     /**
-     * Create a new user instance after a valid registration.
+     * Create a new member instance after a valid registration.
      *
      * @param  array  $data
-     * @return User
+     * @return Member
      */
     protected function create(array $data)
     {
-        return User::create([
+        return Member::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),

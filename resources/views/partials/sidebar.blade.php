@@ -26,10 +26,10 @@
                             <p>Buku</p>
                         </a>
                     </li>
-                    <li class="" id="nav-list-user">
-                        <a href={{route('page.list-user')}}>
+                    <li class="" id="nav-list-member">
+                        <a href={{route('page.list-member')}}>
                             <i class="pe-7s-user"></i>
-                            <p>User</p>
+                            <p>Member</p>
                         </a>
                     </li>
                 </ul>

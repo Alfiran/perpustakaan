@@ -6,13 +6,13 @@
             <div class="col-md-12">
               <div class="card">
                 <div class="header">
-                  <h4 class="title">List User</h4>
+                  <h4 class="title">List Member</h4>
                 </div>
                 <div class="content">
                   <div class="row">
                     <div class="col-md-8 pull-left">
                       <div class="font-icon-list">
-                        <a class="btn btn-default submit" href={{route('page.create-user')}}>
+                        <a class="btn btn-default submit" href={{route('page.create-member')}}>
                           <i class="pe-7s-plus"></i>
                         </a>
                         <button class="btn btn-default submit">
@@ -36,24 +36,24 @@
                         <th>Level</th>
                       </thead>
                       <tbody>
-                        @foreach ($users as $user)
+                        @foreach ($members as $member)
                           <tr>
-                            <td>{{ $user->name }}</td>
-                            <td>{{ $user->class }}</td>
-                            <td>{{ $user->address }}</td>
-                            <td>{{ $user->phone }}</td>
+                            <td>{{ $member->name }}</td>
+                            <td>{{ $member->class }}</td>
+                            <td>{{ $member->address }}</td>
+                            <td>{{ $member->phone }}</td>
                             <td>
-                              @if($user->level == 1)
+                              @if($member->level == 1)
                                 <span class="label label-primary">Administrator</span>
                               @else
-                                <span class="label label-default">User</span>
+                                <span class="label label-default">Member</span>
                               @endif
                             </td>
                             <td>
-                              <a class="btn btn-default" href={{route('page.edit-user',['id' => $user->id])}}>
+                              <a class="btn btn-default" href={{route('page.edit-member',['id' => $member->id])}}>
                                 <i class="pe-7s-pen"></i>
                               </a>
-                              <button class="btn btn-danger" onClick="deleteData('{{$user->id}}')">
+                              <button class="btn btn-danger" onClick="deleteData('{{$member->id}}')">
                                 <i class="pe-7s-trash"></i>
                               </button>
                             </td>
@@ -87,7 +87,7 @@
       if (isConfirm) {
         // delete data using ajax
         $.ajax({
-          url: "/api/users/" + userId,
+          url: "/api/members/" + userId,
           type: 'DELETE',
           success: function( data, textStatus, jQxhr ){
             console.log(data);

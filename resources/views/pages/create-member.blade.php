@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Create User')
+@section('title', 'Create Member')
 @section('content')
 <div class="container-fluid">
           <div class="row">
@@ -14,10 +14,10 @@
           <div class="col-md-8">
               <div class="card">
                 <div class="header">
-                  <h4 class="title">Create User</h4>
+                  <h4 class="title">Create Member</h4>
                 </div>
                 <div class="content">
-                  <form id="formUser">
+                  <form id="formMember">
                     <div class="row">
                       <div class="col-md-12">
                         <div class="form-group">
@@ -31,8 +31,55 @@
                       <div class="col-md-12">
                         <div class="form-group">
                           <label>Class</label>
-                          <input type="text" name="class" class="form-control" placeholder="Class" value="">
-                        </div>
+                           <select id="idclass" class="form-control" id="idstatus" name="class">
+                              <option value="X RPL 1">X RPL 1</option>
+                              <option value="X RPL 2">X RPL 2</option>
+                              <option value="X RPL 3">X RPL 3</option>
+                              <option value="XI RPL 1">XI RPL 1</option>
+                              <option value="XI RPL 2">XI RPL 2</option>
+                              <option value="XI RPL 3">XI RPL 3</option>
+                              <option value="XII RPL 1">XII RPL 1</option>
+                              <option value="XII RPL 2">XII RPL 2</option>
+                              <option value="XII RPL 3">XII RPL 3</option>
+                              <option value="X TEI 1">X TEI 1</option>
+                              <option value="X TEI 2">X TEI 2</option>
+                              <option value="X TEI 3">X TEI 3</option>
+                              <option value="XI TEI 1">XI TEI 1</option>
+                              <option value="XI TEI 2">XI TEI 2</option>
+                              <option value="XI TEI 3">XI TEI 3</option>
+                              <option value="XII TEI 1">XII TEI 1</option>
+                              <option value="XII TEI 2">XII TEI 2</option>
+                              <option value="XII TEI 3">XII TEI 3</option>
+                              <option value="X TKJ 1">X TKJ 1</option>
+                              <option value="X TKJ 2">X TKJ 2</option>
+                              <option value="X TKJ 3">X TKJ 3</option>
+                              <option value="XI TKJ 1">XI TKJ 1</option>
+                              <option value="XI TKJ 2">XI TKJ 2</option>
+                              <option value="XI TKJ 3">XI TKJ 3</option>
+                              <option value="XII TKJ 1">XII TKJ 1</option>
+                              <option value="XII TKJ 2">XII TKJ 2</option>
+                              <option value="XII TKJ 3">XII TKJ 3</option>
+                              <option value="X TKR 1">X TKR 1</option>
+                              <option value="X TKR 2">X TKR 2</option>
+                              <option value="X TKR 3">X TKR 3</option>
+                              <option value="XI TKR 1">XI TKR 1</option>
+                              <option value="XI TKR 2">XI TKR 2</option>
+                              <option value="XI TKR 3">XI TKR 3</option>
+                              <option value="XII TKR 1">XII TKR 1</option>
+                              <option value="XII TKR 2">XII TKR 2</option>
+                              <option value="XII TKR 3">XII TKR 3</option>
+                              <option value="X TSM 1">X TSM 1</option>
+                              <option value="X TSM 2">X TSM 2</option>
+                              <option value="X TSM 3">X TSM 3</option>
+                              <option value="XI TSM 1">XI TSM 1</option>
+                              <option value="XI TSM 2">XI TSM 2</option>
+                              <option value="XI TSM 3">XI TSM 3</option>
+                              <option value="XII TSM 1">XII TSM 1</option>
+                              <option value="XII TSM 2">XII TSM 2</option>
+                              <option value="XII TSM 3">XII TSM 3</option>
+
+                          </select>
+                          </div>
                       </div>
                     </div>
 
@@ -64,7 +111,7 @@
                       <br>
                       <button class="btn btn-default submit" id="btnSimpan">Simpan</button>
                       <button class="btn btn-default submit" id="btnSimpanKembali">Simpan & Kembali</button>
-                      <a class="btn btn-default submit" route={{route('page.list-user')}}>Kembali</a>
+                      <a class="btn btn-default submit" route={{route('page.list-member')}}>Kembali</a>
                     </div>
                     <hr>
                    
@@ -80,7 +127,7 @@
 @section('scripts')
 <script>
     $(document).ready(function(){
-      
+    $('#idclass').select2();
     });
 
     // ini adalah proses submit data menggunakan Ajax
@@ -88,11 +135,11 @@
       // kasih ini dong biar gag hard reload
       event.preventDefault();
       $.ajax({
-        url: '{{route("users.store")}}', // url post data
+        url: '{{route("members.store")}}', // url post data
         dataType: 'JSON',
         type: 'POST',
         contentType: 'application/x-www-form-urlencoded',
-        data: $("#formUser").serialize(), // data tadi diserialize berdasarkan name
+        data: $("#formMember").serialize(), // data tadi diserialize berdasarkan name
         success: function( data, textStatus, jQxhr ){
             console.log('status =>', textStatus);
             console.log('data =>', data);
@@ -106,7 +153,7 @@
             // tampilkan pesan sukses
             showNotifSuccess();
             // clear data inputan
-            $('#formUser').find("input[type=text], textarea").val("");
+            $('#formMember').find("input[type=text], textarea").val("");
             // kembali kelist book
         },
         error: function( data, textStatus, errorThrown ){
@@ -132,7 +179,7 @@
     function showNotifSuccess(){
     	$.notify({
             icon: 'pe-7s-checklist',
-            message: "Data User berhasil disimpan."
+            message: "Data Member berhasil disimpan."
         }, {
                 type: 'success',
                 timer: 4000

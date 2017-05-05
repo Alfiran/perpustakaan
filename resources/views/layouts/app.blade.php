@@ -8,7 +8,7 @@
 
     <title>@yield('title') - Perpustakaan</title>
 
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, member-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
 
 
@@ -91,29 +91,29 @@
             case '/':
                 $('#nav-list-transaction').removeClass('active');
                 $('#nav-list-book').removeClass('active');
-                $('#nav-list-user').removeClass('active');
+                $('#nav-list-member').removeClass('active');
                 $('#nav-dashboard').addClass('active');
                 break; 
             case '/transactions':
             case '/transactions/create':
                 $('#nav-dashboard').removeClass('active');
                 $('#nav-list-book').removeClass('active');
-                $('#nav-list-user').removeClass('active');
+                $('#nav-list-member').removeClass('active');
                 $('#nav-list-transaction').addClass('active');
                 break; 
             case '/books':
             case '/books/create':
                 $('#nav-dashboard').removeClass('active');
                 $('#nav-list-transaction').removeClass('active');
-                $('#nav-list-user').removeClass('active');
+                $('#nav-list-member').removeClass('active');
                 $('#nav-list-book').addClass('active');
                 break;  
-            case '/users':
-            case '/users/create':
+            case '/members':
+            case '/members/create':
                 $('#nav-dashboard').removeClass('active');
                 $('#nav-list-transaction').removeClass('active');
                 $('#nav-list-book').removeClass('active');
-                 $('#nav-list-user').addClass('active');
+                 $('#nav-list-member').addClass('active');
                 break;  
             default: 
                 text = "Looking forward to the Weekend";

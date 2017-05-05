@@ -31,7 +31,7 @@
                     <table class="table table-hover table-striped">
                       <thead>
                         <th>Buku</th>
-                        <th>transactions</th>
+                        <th>Peminjam</th>
                         <th>Petugas</th>
                         <th>Status</th>
                         <th>Tanggal Kembali</th>
@@ -41,7 +41,7 @@
                          @foreach ($transactions as $transaction)
                           <tr>
                             <td>{{ $transaction->book->judul }}</td>
-                            <td>{{ $transaction->user_id }}</td>
+                            <td>{{ $transaction->user->name }}</td>
                             <td>{{ $transaction->petugas }}</td>
                             <td>{{ $transaction->status }}</td>
                             <td>{{ $transaction->expired_at }}</td>

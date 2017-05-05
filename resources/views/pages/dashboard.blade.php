@@ -30,7 +30,7 @@
                         <div class="col-md-8">
                             <div class="card">
                                 <div class="header">
-                                    <h4 class="title">Users Behavior</h4>
+                                    <h4 class="title">Members Behavior</h4>
                                     <p class="category">24 Hours performance</p>
                                 </div>
                                 <div class="content">
@@ -143,7 +143,7 @@
                                                         <input type="checkbox" value="" data-toggle="checkbox">
                                                     </label>
                                                     </td>
-                                                    <td>Create 4 Invisible User Experiences you Never Knew About</td>
+                                                    <td>Create 4 Invisible Member Experiences you Never Knew About</td>
                                                     <td class="td-actions text-right">
                                                         <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
                                                         <i class="fa fa-edit"></i>

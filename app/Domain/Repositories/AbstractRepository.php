@@ -231,7 +231,7 @@ abstract class AbstractRepository implements RepositoryContract
     public function __call($method, $parameters)
     {
         if (method_exists($this->model, $method)) {
-            return call_user_func_array([$this->model, $method], $parameters);
+            return call_member_func_array([$this->model, $method], $parameters);
         }
         throw new \BadMethodCallException(sprintf('Method [%s] does not exist.', $method));
     }
