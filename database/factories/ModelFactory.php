@@ -11,13 +11,13 @@
 |
 */
 
-$factory->define(App\Domain\Entities\Contact::class, function (Faker\Generator $faker) {
-
+$factory->define(App\Domain\Entities\User::class, function (Faker\Generator $faker) {
     return [
-        'name' => $faker->name,
-        'email' => $faker->unique()->safeEmail,
-        'phone' => $faker->phoneNumber,
-        'address' => $faker->address
+    'name' => $faker->name,
+    'email' => $faker->unique()->safeEmail,
+    'phone' => $faker->phoneNumber,
+    'address' => $faker->address,
+    'level' => $faker->numberBetween(0,1),
+    'class' => $faker->randomElement($array = array ('XII RPL 1','XII RPL 2','XII RPL 3'))
     ];
 });
-
