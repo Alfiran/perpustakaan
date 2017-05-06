@@ -15,15 +15,17 @@
                         <a class="btn btn-default submit" href={{route('page.create-user')}}>
                           <i class="pe-7s-plus"></i>
                         </a>
-                        <button class="btn btn-default submit">
+                        <a class="btn btn-default submit" href={{route( 'page.list-user')}}>
                           <i class="pe-7s-refresh"></i>
-                        </button>
+                        </a>
                       </div>
                     </div>
                     <div class="col-md-4 pull-right">
+                      <form method="GET" action="{{route('page.list-user')}}"> 
                       <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Pencarian..." value="">
-                      </div>
+                      <input type="text" class="form-control" name="search" placeholder="Pencarian..." value="">
+                    </div>
+                  </form>
                     </div>
                   </div>
                   <div class="table-responsive table-full-width">
@@ -65,6 +67,10 @@
                 </div>
               </div>
             </div>
+            <div class="col-md-12 text-center">
+      <!--pagination-->
+      {{$users->links()}}
+    </div>
           </div>
         </div>
 @endsection

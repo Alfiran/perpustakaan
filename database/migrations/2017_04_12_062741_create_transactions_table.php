@@ -19,6 +19,7 @@ class CreateTransactionsTable extends Migration
             $table->integer('user_id', false);
             $table->string('petugas');
             $table->string('status');
+            $table->string('kode');
             $table->date('expired_at');
             $table->timestamps(); // created_at + updated_at
             $table->softDeletes(); // deleted_at

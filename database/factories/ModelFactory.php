@@ -18,6 +18,7 @@ $factory->define(App\Domain\Entities\User::class, function (Faker\Generator $fak
     'phone' => $faker->phoneNumber,
     'address' => $faker->address,
     'level' => $faker->numberBetween(0,1),
-    'class' => $faker->randomElement($array = array ('XII RPL 1','XII RPL 2','XII RPL 3'))
+    'class' => $faker->randomElement($array = array ('XII RPL 1','XII RPL 2','XII RPL 3')),
+    'password' => bcrypt($faker->randomElement($array = array ('qwerty','12345678')))
     ];
 });

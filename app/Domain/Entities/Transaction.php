@@ -17,7 +17,7 @@ class Transaction extends Model
      * @var array
      */
     protected $fillable = [
-        'book_id', 'user_id', 'petugas','status','expired_at',
+        'book_id', 'user_id', 'petugas','status','expired_at','kode',
     ];
     protected $with=['user','book'];
     public function user()

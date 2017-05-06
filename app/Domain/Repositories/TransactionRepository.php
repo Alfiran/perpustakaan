@@ -47,7 +47,7 @@ class TransactionRepository extends AbstractRepository implements TransactionInt
     public function paginate($limit = 10, $page = 1, array $column = ['*'], $field, $search = '')
     {
         // query to aql
-        return parent::paginate($limit, $page, $column, 'book_id', $search);
+        return parent::paginate($limit, $page, $column, 'kode', $search);
     }
 
     /**
@@ -62,6 +62,7 @@ class TransactionRepository extends AbstractRepository implements TransactionInt
             'user_id'   => e($data['user_id']),
             'petugas' => e($data['petugas']),
             'status'   => e($data['status']),
+            'kode'   => 'ANF-101',
             'expired_at'   =>  \Carbon\Carbon::now()->addDays(7),
         ]);
 

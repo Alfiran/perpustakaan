@@ -49,8 +49,8 @@
                   </td>
                   <td>
                     <a class="btn btn-default" href={{route( 'page.edit-member',[ 'id'=> $member->id])}}>
-<i class="pe-7s-pen"></i>
-</a>
+                    <i class="pe-7s-pen"></i>
+                    </a>
                     <button class="btn btn-danger" onClick="deleteData('{{$member->id}}')">
                       <i class="pe-7s-trash"></i>
                     </button>
@@ -69,7 +69,8 @@
     </div>
   </div>
 </div>
-@endsection @section('scripts')
+@endsection 
+@section('scripts')
 <script>
   function deleteData(userId) {
     console.log(userId);

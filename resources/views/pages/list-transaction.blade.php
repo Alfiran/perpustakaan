@@ -16,20 +16,22 @@
                         <a class="btn btn-default submit" href={{route('page.create-transaction')}}>
                           <i class="pe-7s-plus"></i>
                         </a>
-                        <button class="btn btn-default submit">
+                        <a class="btn btn-default submit" href={{route( 'page.list-transaction')}}>
                           <i class="pe-7s-refresh"></i>
-                        </button>
+                        </a>
                       </div>
                     </div>
                     <div class="col-md-4 pull-right">
-                      <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Pencarian..." value="">
+                     <form method="GET" action="{{route('page.list-transaction')}}"> 
+                     <div class="form-group">
+                     <input type="text" class="form-control" name="search" placeholder="Pencarian..." value="">
                       </div>
-                    </div>
+                   </form>
                   </div>
                   <div class="table-responsive table-full-width">
                     <table class="table table-hover table-striped">
                       <thead>
+                        <th>Kode</th>
                         <th>Buku</th>
                         <th>Peminjam</th>
                         <th>Petugas</th>
@@ -40,6 +42,7 @@
                       <tbody>
                          @foreach ($transactions as $transaction)
                           <tr>
+                            <td>{{ $transaction->kode }}</td>
                             <td>{{ $transaction->book->judul }}</td>
                             <td>{{ $transaction->user->name }}</td>
                             <td>{{ $transaction->petugas }}</td>
@@ -62,9 +65,12 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-
+         <div class="col-md-12 text-center">
+      <!--pagination-->
+      {{$transactions->links()}}
+    </div>
+  </div>
+</div>
 @endsection
 @section('scripts')
 <script>
