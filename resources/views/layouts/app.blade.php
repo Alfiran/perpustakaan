@@ -114,6 +114,14 @@
                 $('#nav-list-transaction').removeClass('active');
                 $('#nav-list-book').removeClass('active');
                  $('#nav-list-member').addClass('active');
+                break; 
+            case '/users':
+            case '/users/create':
+                $('#nav-dashboard').removeClass('active');
+                $('#nav-list-transaction').removeClass('active');
+                $('#nav-list-book').removeClass('active');
+                $('#nav-list-member').removeClass('active');
+                $('#nav-list-user').addClass('active');
                 break;  
             default: 
                 text = "Looking forward to the Weekend";

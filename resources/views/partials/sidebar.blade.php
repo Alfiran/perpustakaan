@@ -32,6 +32,12 @@
                             <p>Member</p>
                         </a>
                     </li>
+                    <li class="" id="nav-list-user">
+                        <a href={{route('page.list-user')}}>
+                            <i class="pe-7s-user"></i>
+                            <p>User</p>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>

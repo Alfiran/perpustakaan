@@ -6,11 +6,11 @@ use App\Http\Requests\Request;
 use Illuminate\Contracts\Validation\Validator;
 
 /**
- * Class UserCreateRequest
+ * Class UserEditRequest
  *
  * @package App\Http\Requests\User
  */
-class UserCreateRequest extends Request
+class UserEditRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -29,7 +29,6 @@ class UserCreateRequest extends Request
      */
     protected $attrs = [
         'name'    => 'Name',
-        'password'=> 'Password',
         'class'   => 'Class',
         'address' => 'Address',
         'phone'   => 'Phone',
@@ -44,7 +43,6 @@ class UserCreateRequest extends Request
     {
         return [
             'name'    => 'required|max:225',
-            'password'  => 'required|max:225',
             'class'   => 'required|max:225',
             'address' => 'required|max:60',
             'phone'   => 'required|max:225',

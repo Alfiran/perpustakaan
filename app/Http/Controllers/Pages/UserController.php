@@ -2,32 +2,32 @@
 
 namespace App\Http\Controllers\Pages;
 
-use App\Http\RequestsUser\BookCreateRequest;
+use App\Http\RequestsUser\UserCreateRequest;
 use Illuminate\Http\Request;
-use App\Domain\Repositories\BookRepository;
+use App\Domain\Repositories\UserRepository;
 use App\Http\Controllers\Controller;
 
-class BookController extends Controller
+class UserController extends Controller
 {
 
     /**
-     * @var BookRepository
+     * @var UserRepository
      */
     protected $user;
 
     /**
-     * BookController constructor.
-     * @param BookRepository $user
+     * UserController constructor.
+     * @param UserRepository $user
      */
-    public function __construct(BookRepository $user)
+    public function __construct(UserRepository $user)
     {
         $this->user = $user;
     }
 
      public function index(Request $request)
     {
-        $books = $this->user->paginate(10, $request->input('name'), $column = ['*'], '', $request->input('search'));
-        return view('pages.list-user', ['books' => $books]); 
+        $users = $this->user->paginate(10, $request->input('name'), $column = ['*'], '', $request->input('search'));
+        return view('pages.list-user', ['users' => $users]); 
     }
 
     public function create()
