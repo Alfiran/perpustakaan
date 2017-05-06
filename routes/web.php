@@ -26,3 +26,7 @@ Route::get('/books/{id}/edit','Pages\BookController@edit')->name('page.edit-book
 Route::get('/transactions','Pages\TransactionController@index')->name('page.list-transaction');
 Route::get('/transactions/create','Pages\TransactionController@create')->name('page.create-transaction');
 Route::get('/transactions/{id}/edit','Pages\TransactionController@edit')->name('page.edit-transaction');
+
+Route::get('/users','Pages\UserController@index')->name('page.list-user');
+Route::get('/users/create','Pages\UserController@create')->name('page.create-user');
+Route::get('/users/{id}/edit','Pages\UserController@edit')->name('page.edit-user');
