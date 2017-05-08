@@ -60,14 +60,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="row">
-                      <div class="col-md-12">
-                        <div class="form-group">
-                          <label>Keterangan</label>
-                          <textarea class="form-control" placeholder="Keterangan" name="keterangan">{{$transaction->keterangan}}</textarea>
-                        </div>
-                      </div>
-                    </div>
+                    
                     <button class="btn btn-default submit" id="btnUpdate">Update</button>
                     <a class="btn btn-default submit" href="list-transaksi">Kembali</a>
                                 </div>

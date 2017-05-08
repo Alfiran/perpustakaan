@@ -64,14 +64,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="row">
-                      <div class="col-md-12">
-                        <div class="form-group">
-                          <label>Keterangan</label>
-                          <textarea class="form-control" placeholder="Keterangan" name="keterangan"></textarea>
-                        </div>
-                      </div>
-                    </div>
+                    
                     <div class="row">
                       <div class="col-md-12">
                         <div class="form-group">

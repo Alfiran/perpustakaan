@@ -42,8 +42,8 @@
                          @foreach ($transactions as $transaction)
                           <tr>
                             <td>{{ $transaction->kode }}</td>
-                            <td>{{ $transaction->book->judul === null ? "null" : $transaction->book->judul }}</td>
-                            <td>{{ $transaction->user->name === null ? "null" : $transaction->user->name }}</td>
+                            <td>{{ $transaction->book == null ? "null" : $transaction->book->judul }}</td>
+                            <td>{{ $transaction->user == null ? "null" : $transaction->user->name }}</td>
                             <td>{{ $transaction->petugas }}</td>
                             <td>{{ $transaction->status }}</td>
                             <td>{{ $transaction->expired_at }}</td>
