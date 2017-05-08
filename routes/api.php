@@ -24,3 +24,6 @@ Route::resource('members','MemberController');
 // Route::get('getList-books','BookController@getList');
 Route::get('/getlist-books','Pages\BookController@getList')->name('api.getlist-books');
 Route::get('/getlist-users','Pages\UserController@getList')->name('api.getlist-users');
+Route::post('post-login', 'Auth\LoginController@postLogin')->name('api.login');
+Route::get('logout', 'Auth\LoginController@getLogout')->name('api.logout');
+// Route::get('getList-users','UserController@getList');

@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('pages.dashboard');
 })->name('page.dashboard');
 
+Route::get('/login','Auth\LoginController@getLogin')->name('page.login');
+
 Route::get('/members','Pages\MemberController@index')->name('page.list-member');
 Route::get('/members/create','Pages\MemberController@create')->name('page.create-member');
 Route::get('/members/{id}/edit','Pages\MemberController@edit')->name('page.edit-member');

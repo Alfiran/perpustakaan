@@ -1,0 +1,26 @@
+.container
+  .info
+    h1 Flat Login Form
+    span Made with 
+     i.fa.fa-heart
+     |  by 
+     a(href="http://andytran.me") Andy Tran
+.form
+  .thumbnail
+    img(src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/hat.svg')
+  form.register-form
+    input(type='text', placeholder='name')
+    input(type='password', placeholder='password')
+    input(type='text', placeholder='email address')
+    button create
+    p.message Already registered? 
+      a(href='#') Sign In
+  form.login-form
+    input(type='text', placeholder='username')
+    input(type='password', placeholder='password')
+    button login
+    p.message Not registered? 
+      a(href='#') Create an account
+      
+video#video(autoplay, loop, poster="polina.jpg")
+  source(src="http://andytran.me/A%20peaceful%20nature%20timelapse%20video.mp4" type="video/mp4")

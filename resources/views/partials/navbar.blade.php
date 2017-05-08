@@ -34,7 +34,7 @@
                                     <li><a href="#">My Profile</a></li>
                                     <li><a href="#">Setting</a></li>
                                     <li class="divider"></li>
-                                    <li><a href="#">Log Out</a></li>
+                                    <li><a href="{{route('api.logout')}}">Log Out</a></li>
                                 </ul>
                             </li>
                     </div>
