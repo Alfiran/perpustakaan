@@ -46,8 +46,13 @@ class MemberRepository extends AbstractRepository implements MemberInterface, Cr
      */
     public function paginate($limit = 10, $page = 1, array $column = ['*'], $field, $search = '')
     {
+         $user = $this->model
+        ->where('name', 'like', '%' . $search . '%')
+        ->where('level','0')
+        ->paginate($limit);
+        
+        return $user;
         // query to aql
-        return parent::paginate($limit, $page, $column, 'name', $search);
     }
 
     /**

@@ -14,12 +14,13 @@ class CreateBooksTable extends Migration
     public function up()
     {
          Schema::create('books', function (Blueprint $table) {
-            $table->increments('id');
+            $table->uuid('id');
             $table->string('kode_buku')->unique();
             $table->string('judul');
             $table->string('pengarang');
             $table->timestamps();
             $table->softDeletes();
+            $table->primary('id');
         });
     }
 

@@ -14,7 +14,7 @@ class CreateTransactionsTable extends Migration
     public function up()
     {
         Schema::create('transactions', function (Blueprint $table) {
-            $table->increments('id'); // primary key + auto increment
+            $table->uuid('id'); // primary key + auto increment
             $table->integer('book_id', false);
             $table->integer('user_id', false);
             $table->string('petugas');
@@ -23,6 +23,7 @@ class CreateTransactionsTable extends Migration
             $table->date('expired_at');
             $table->timestamps(); // created_at + updated_at
             $table->softDeletes(); // deleted_at
+             $table->primary('id');
         });
     }
 
