@@ -1,11 +1,10 @@
 @extends('layouts.app')
 @section('title', 'List Transaksi')
 @section('content')
-    <div class="container-fluid">
+   <div class="container-fluid">
           <div class="row">
             <div class="col-md-12">
               <div class="card">
-
                 <div class="header">
                   <h4 class="title">List Transaksi</h4>
                 </div>
@@ -22,29 +21,29 @@
                       </div>
                     </div>
                     <div class="col-md-4 pull-right">
-                     <form method="GET" action="{{route('page.list-transaction')}}"> 
-                     <div class="form-group">
-                     <input type="text" class="form-control" name="search" placeholder="Pencarian..." value="">
-                      </div>
-                   </form>
+                      <form method="GET" action="{{route('page.list-transaction')}}"> 
+                      <div class="form-group">
+                      <input type="text" class="form-control" name="search" placeholder="Pencarian..." value="">
+                    </div>
+                  </form>
+                    </div>
                   </div>
                   <div class="table-responsive table-full-width">
                     <table class="table table-hover table-striped">
                       <thead>
-                        <th>Kode</th>
-                        <th>Buku</th>
+                        <th>Kode TRX</th>
                         <th>Peminjam</th>
-                        <th>Petugas</th>
+                        <th>Buku</th>
                         <th>Status</th>
                         <th>Tanggal Kembali</th>
                         <th>Aksi</th>
                       </thead>
-                      <tbody>
+                       <tbody>
                          @foreach ($transactions as $transaction)
                           <tr>
                             <td>{{ $transaction->kode }}</td>
-                            <td>{{ $transaction->book->judul }}</td>
-                            <td>{{ $transaction->user->name }}</td>
+                            <td>{{ $transaction->book->judul === null ? "null" : $transaction->book->judul }}</td>
+                            <td>{{ $transaction->user->name === null ? "null" : $transaction->user->name }}</td>
                             <td>{{ $transaction->petugas }}</td>
                             <td>{{ $transaction->status }}</td>
                             <td>{{ $transaction->expired_at }}</td>
@@ -60,17 +59,16 @@
                         @endforeach
                       </tbody>
                     </table>
-                      
                   </div>
                 </div>
               </div>
             </div>
-         <div class="col-md-12 text-center">
+            <div class="col-md-12 text-center">
       <!--pagination-->
       {{$transactions->links()}}
     </div>
-  </div>
-</div>
+          </div>
+        </div>
 @endsection
 @section('scripts')
 <script>

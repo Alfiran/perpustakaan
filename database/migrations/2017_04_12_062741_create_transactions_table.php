@@ -15,8 +15,8 @@ class CreateTransactionsTable extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->uuid('id'); // primary key + auto increment
-            $table->integer('book_id', false);
-            $table->integer('user_id', false);
+            $table->uuid('book_id');
+            $table->uuid('user_id');
             $table->string('petugas');
             $table->string('status');
             $table->string('kode');
