@@ -10,13 +10,13 @@
                 <ul class="nav">
                     <li class="" id="nav-dashboard">
                         <a href={{route('page.dashboard')}}>
-                            <i class="pe-7s-graph"></i>
+                            <i class="pe-7s-home"></i>
                             <p>Dashboard</p>
                         </a>
                     </li>
                     <li class="" id="nav-list-user">
                         <a href={{route('page.list-user')}}>
-                            <i class="pe-7s-user"></i>
+                            <i class="pe-7s-users"></i>
                             <p>User</p>
                         </a>
                     </li>

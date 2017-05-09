@@ -105,6 +105,51 @@
         }
       });
     });
+    $("#btnSimpanKembali").click(function(event) {
+      // kasih ini dong biar gag hard reload
+      event.preventDefault();
+      $.ajax({
+        url: '{{route("books.store")}}', // url post data
+        dataType: 'JSON',
+        type: 'POST',
+        contentType: 'application/x-www-form-urlencoded',
+        data: $("#formBook").serialize(), // data tadi diserialize berdasarkan name
+        success: function( data, textStatus, jQxhr ){
+            console.log('status =>', textStatus);
+            console.log('data =>', data);
+            // clear validation error messsages
+            $('#errMsg').addClass('hide');
+            $('#errData').html('');
+            // scroll up
+            // $('html, body').animate({
+            //     scrollTop: $("#nav-top").offset().top
+            // }, 2000);
+            // tampilkan pesan sukses
+            showNotifSuccess();
+            // clear data inputan
+            $('#formBook').find("input[type=text], textarea").val("");
+            // kembali kelist book
+            window.location.replace('{{route("page.list-book")}}');
+        },
+        error: function( data, textStatus, errorThrown ){
+          var messages = jQuery.parseJSON(data.responseText);
+          console.log( errorThrown );
+          // $('html, body').animate({
+          //     scrollTop: $("#nav-top").offset().top
+          // }, 2000);
+          // scroll up 
+          // tampilkan pesan error
+          $('#errData').html('');
+          $('#errMsg').addClass('alert-warning');
+          $('#errMsg').removeClass('hide');
+          $.each(messages, function(i, val) {
+            $('#errData').append('<p>'+ i +' : ' + val +'</p>')
+            console.log(i,val);
+          });          
+          // jangan clear data
+        }
+      });
+    });
     
     function showNotifSuccess(){
     	$.notify({

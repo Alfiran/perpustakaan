@@ -44,7 +44,7 @@
 }
 .form button {
   outline: 0;
-  background: #EF3B3A;
+  background: #9368E9;
   width: 100%;
   border: 0;
   padding: 15px;
@@ -83,7 +83,7 @@
   clear: both;
 }
 .container .info {
-  margin: 50px auto;
+  margin: 30px auto;
   text-align: center;
 }
 .container .info h1 {
