@@ -46,9 +46,14 @@ class BookRepository extends AbstractRepository implements BookInterface, Crudab
      */
     public function paginate($limit = 10, $page = 1, array $column = ['*'], $field, $search = '')
     {
-        // query to aql
-        return parent::paginate($limit, $page, $column, 'judul', $search);
-    }
+         // query to aql
+        $books = $this->model
+        ->orderBy('created_at', 'desc')
+        ->where('judul', 'like', '%' . $search . '%')
+        ->paginate($limit);
+        
+        return $books;
+        }
 
     /**
      * @param array $data

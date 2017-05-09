@@ -14,10 +14,16 @@
                             <p>Dashboard</p>
                         </a>
                     </li>
-                    <li class="" id="nav-list-transaction">
-                        <a href={{route('page.list-transaction')}}>
-                            <i class="pe-7s-note2"></i>
-                            <p>Transaksi</p>
+                    <li class="" id="nav-list-user">
+                        <a href={{route('page.list-user')}}>
+                            <i class="pe-7s-user"></i>
+                            <p>User</p>
+                        </a>
+                    </li>
+                    <li class="" id="nav-list-member">
+                        <a href={{route('page.list-member')}}>
+                            <i class="pe-7s-id"></i>
+                            <p>Member</p>
                         </a>
                     </li>
                     <li class="" id="nav-list-book">
@@ -26,18 +32,14 @@
                             <p>Buku</p>
                         </a>
                     </li>
-                    <li class="" id="nav-list-member">
-                        <a href={{route('page.list-member')}}>
-                            <i class="pe-7s-user"></i>
-                            <p>Member</p>
+                    <li class="" id="nav-list-transaction">
+                        <a href={{route('page.list-transaction')}}>
+                            <i class="pe-7s-note2"></i>
+                            <p>Transaksi</p>
                         </a>
                     </li>
-                    <li class="" id="nav-list-user">
-                        <a href={{route('page.list-user')}}>
-                            <i class="pe-7s-user"></i>
-                            <p>User</p>
-                        </a>
-                    </li>
+                    
+                    
                 </ul>
             </div>
         </div>

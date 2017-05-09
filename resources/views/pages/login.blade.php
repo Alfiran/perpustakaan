@@ -33,7 +33,7 @@
   <form class="login-form" name='formLogin' method="post" accept-charset="UTF-8" action="{{route('api.login')}}">
     <input type="email" name="email" placeholder="Email"/>
     <input type="password" name="password" placeholder="Password"/>
-    <button>login</button>
+    <button>Login</button>
     <p class="message">Not registered? <a href="#">Create an account</a></p>
   </form>
 </div>

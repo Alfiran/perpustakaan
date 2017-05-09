@@ -47,6 +47,7 @@ class MemberRepository extends AbstractRepository implements MemberInterface, Cr
     public function paginate($limit = 10, $page = 1, array $column = ['*'], $field, $search = '')
     {
          $user = $this->model
+        ->orderBy('created_at', 'desc')
         ->where('name', 'like', '%' . $search . '%')
         ->where('level','0')
         ->paginate($limit);

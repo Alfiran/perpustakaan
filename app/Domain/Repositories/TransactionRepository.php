@@ -47,7 +47,12 @@ class TransactionRepository extends AbstractRepository implements TransactionInt
     public function paginate($limit = 10, $page = 1, array $column = ['*'], $field, $search = '')
     {
         // query to aql
-        return parent::paginate($limit, $page, $column, 'kode', $search);
+        $transactions = $this->model
+        ->orderBy('created_at', 'desc')
+        ->where('kode', 'like', '%' . $search . '%')
+        ->paginate($limit);
+        
+        return $transactions;
     }
 
     /**
