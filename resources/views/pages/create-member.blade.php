@@ -99,14 +99,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="row">
-                      <div class="col-md-12">
-                        <div class="form-group">
-                          <label>Level</label>
-                          <input type="text" name="level" class="form-control" placeholder="Level" value="">
-                        </div>
-                      </div>
-                    </div>
+                    
                     <div>
                       <br>
                       <button class="btn btn-default submit" id="btnSimpan">Simpan</button>

@@ -18,12 +18,18 @@
                         <a class="btn btn-default submit" href={{route( 'page.list-user')}}>
                           <i class="pe-7s-refresh"></i>
                         </a>
+                        <a class="btn btn-default submit"href={{route( 'page.list-user')}}>
+                          <i class="pe-7s-mail-open-file"></i>
+                        </a>
+                         <a class="btn btn-default submit"href={{route( 'page.list-book')}}>
+                          <i class="pe-7s-print"></i>
+                        </a>
                       </div>
                     </div>
                     <div class="col-md-4 pull-right">
                       <form method="GET" action="{{route('page.list-user')}}"> 
                       <div class="form-group">
-                      <input type="text" class="form-control" name="search" placeholder="Pencarian..." value="">
+                      <input type="text" class="form-control" name="search" placeholder="Pencarian berdasarkan Nama..." value="">
                     </div>
                   </form>
                     </div>

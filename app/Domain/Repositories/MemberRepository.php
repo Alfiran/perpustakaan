@@ -66,9 +66,11 @@ class MemberRepository extends AbstractRepository implements MemberInterface, Cr
         return parent::create([
             'name'    => e($data['name']),
             'class'   => e($data['class']),
+            'email'   => 'null',
+            'password'   => bcrypt('qwerty'),
             'address' => e($data['address']),
             'phone'   => e($data['phone']),
-            'level'   => e($data['level'])
+            'level'   => 0
         ]);
 
     }
@@ -85,7 +87,6 @@ class MemberRepository extends AbstractRepository implements MemberInterface, Cr
            'class'   => e($data['class']),
            'address' => e($data['address']),
            'phone'   => e($data['phone']),
-           'level'   => e($data['level'])
         ]);
     }
 

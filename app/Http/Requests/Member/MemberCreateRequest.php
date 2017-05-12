@@ -32,7 +32,6 @@ class MemberCreateRequest extends Request
         'class'   => 'Class',
         'address' => 'Address',
         'phone'   => 'Phone',
-        'level'   => 'Level',
     ];
 
     /**
@@ -47,7 +46,6 @@ class MemberCreateRequest extends Request
             'class'   => 'required|max:225',
             'address' => 'required|max:60',
             'phone'   => 'required|max:225',
-            'level'   => 'required|max:225',
         ];
     }
 
