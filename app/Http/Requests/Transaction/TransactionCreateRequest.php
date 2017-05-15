@@ -29,7 +29,6 @@ class TransactionCreateRequest extends Request
     protected $attrs = [
         'book_id'    => 'Book_id',
         'user_id'    => 'User_id',
-        'petugas'    => 'Petugas',
         'status'     => 'Status',
     ];
 
@@ -43,7 +42,6 @@ class TransactionCreateRequest extends Request
         return [
             'book_id'    => 'required|max:225',
             'user_id'    => 'required|max:225',
-            'petugas'    => 'required|max:60',
             'status'     => 'required|max:225',
         ];
     }

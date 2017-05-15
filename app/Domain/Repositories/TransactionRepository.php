@@ -65,7 +65,7 @@ class TransactionRepository extends AbstractRepository implements TransactionInt
         return parent::create([
             'book_id'    => e($data['book_id']),
             'user_id'   => e($data['user_id']),
-            'petugas' => e($data['petugas']),
+            'petugas' => \Auth::user()->name,
             'status'   => e($data['status']),
             'kode'   => 'ANF-101',
             'expired_at'   =>  \Carbon\Carbon::now()->addDays(7),
