@@ -21,6 +21,7 @@ class BookController extends Controller
      */
     public function __construct(BookRepository $book)
     {
+        $this->middleware('auth');
         $this->book = $book;
     }
 

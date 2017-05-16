@@ -27,6 +27,7 @@ class TransactionController extends Controller
      */
     public function __construct(TransactionRepository $transaction, BookRepository $book, MemberRepository $user)
     {
+        $this->middleware('auth');
         $this->transaction = $transaction;
         $this->book = $book;
         $this->user = $user;

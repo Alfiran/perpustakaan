@@ -32,7 +32,6 @@
       <button type="submit">login</button>
     </form>
   </div>
-<<<<<<< HEAD
 </div>
 <div class="form">
   <div class="thumbnail"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/hat.svg"/></div>
@@ -52,8 +51,6 @@
 <video id="video" autoplay="autoplay" loop="loop" poster="polina.jpg">
   <source src="http://andytran.me/A%20peaceful%20nature%20timelapse%20video.mp4" type="video/mp4"/>
 </video>
-=======
->>>>>>> 904b92ffa4be1b7697c631fb53d85f843c2bb5bd
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.dashboard')
 @section('title', 'Edit Transaksi')
 @section('content')
 
@@ -15,7 +15,7 @@
 
                                  <div class="col-md-12">
                                      <div class="form-group">
-                                         <label>Book Id</label>
+                                         <label>Judul Buku</label>
                                           <select class="form-control" id="idbooks" name="book_id" value="{{$transaction->book_id}}">
                                            @foreach($books as $book)
                                              <option value="{{$book->id}}">{{$book->judul}}</option>
@@ -46,8 +46,11 @@
                           <label>Peminjam</label>
                          <select class="form-control" id="idusers" name="user_id" value="{{$transaction->peminjam}}">
                             @foreach($users as $user)
-                              <option value="{{$user->id}}">{{$user->name}}</option>
-                            @endforeach
+                            @if($user->id == $transaction->user_id)
+                            <option value="{{$user->id}}" selected>{{$user->name}}</option>
+                            @endif
+                            <option value="{{$user->id}}">{{$user->name}}</option>
+                          @endforeach
                           </select>
                         </div>
                       </div>

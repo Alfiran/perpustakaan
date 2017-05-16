@@ -11,11 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('pages.dashboard');
-})->name('page.dashboard');
 
-Route::get('/login','Auth\LoginController@getLogin')->name('page.login');
+Route::get('/', 'HomeController@dashboard')->name('page.dashboard');
+
+
+// Route::get('/login','Auth\LoginController@getLogin')->name('page.login');
 
 Route::get('/members','Pages\MemberController@index')->name('page.list-member');
 Route::get('/members/create','Pages\MemberController@create')->name('page.create-member');
@@ -32,3 +32,7 @@ Route::get('/transactions/{id}/edit','Pages\TransactionController@edit')->name('
 Route::get('/users','Pages\UserController@index')->name('page.list-user');
 Route::get('/users/create','Pages\UserController@create')->name('page.create-user');
 Route::get('/users/{id}/edit','Pages\UserController@edit')->name('page.edit-user');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');

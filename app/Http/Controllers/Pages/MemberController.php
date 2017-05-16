@@ -21,6 +21,7 @@ class MemberController extends Controller
      */
     public function __construct(MemberRepository $member)
     {
+        $this->middleware('auth');
         $this->member = $member;
     }
 
