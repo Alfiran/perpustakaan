@@ -53,8 +53,9 @@ class TransactionController extends Controller
         $books = $this->book->getList();
         $users = $this->user->getList();
         $transaction = $this->transaction->findById($id);
-        $arr= [$books, $users, $transaction];
-        return view('pages.edit-transaction',compact('books','users','transaction',$arr)); 
+        $status = ['Belum Kembali','Sudah Kembali','Hilang','Perpanjang','Kadaluarsa'];
+        $arr= [$books, $users, $transaction, $status];
+        return view('pages.edit-transaction',compact('books','users','transaction','status',$arr)); 
     }
 
 }

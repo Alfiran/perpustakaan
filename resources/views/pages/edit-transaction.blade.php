@@ -13,28 +13,32 @@
                          <form id="formTransaction">
                      <div class="row">
 
-                                 <div class="col-md-12">
-                                     <div class="form-group">
-                                         <label>Judul Buku</label>
-                                          <select class="form-control" id="idbooks" name="book_id" value="{{$transaction->book_id}}">
-                                           @foreach($books as $book)
-                                             <option value="{{$book->id}}">{{$book->judul}}</option>
-                                           @endforeach
-                                         </select>
-                                         </div>
-                                         </div>
-                                         </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>Judul Buku</label>
+                             <select class="form-control" id="idbooks" name="book_id" value="{{$transaction->book_id}}">
+                             @foreach($books as $book)
+                            @if($book->id == $transaction->book_id)
+                              <option value="{{$book->id}}" selected>{{$book->judul}}</option>
+                             @endif
+                              <option value="{{$book->id}}">{{$book->judul}}</option>
+                             @endforeach
+                            </select>
+                     </div>
+                     </div>
+                     </div>
 
                      <div class="row">
                       <div class="col-md-12">
                         <div class="form-group">
                           <label>Status</label>
                           <select class="form-control" id="idstatus" name="status" value="{{$transaction->status}}">
-                              <option value="Belum Kembali">Belum Kembali</option>
-                              <option value="Sudah Kembali">Sudah Kembali</option>
-                              <option value="Hilang">Hilang</option>
-                              <option value="Perpanjang">Perpanjang</option>
-                              <option value="Kadaluarsa">Kadaluarsa</option>
+                            @foreach($status as $s)
+                              @if($s == $transaction->status)
+                                <option value="{{$s}}" selected>{{$s}}</option>
+                              @endif
+                              <option value="{{$s}}">{{$s}}</option>
+                            @endforeach
                           </select>
                         </div>
                       </div>
@@ -47,7 +51,7 @@
                          <select class="form-control" id="idusers" name="user_id" value="{{$transaction->peminjam}}">
                             @foreach($users as $user)
                             @if($user->id == $transaction->user_id)
-                            <option value="{{$user->id}}" selected>{{$user->name}}</option>
+                              <option value="{{$user->id}}" selected>{{$user->name}}</option>
                             @endif
                             <option value="{{$user->id}}">{{$user->name}}</option>
                           @endforeach
