@@ -34,9 +34,20 @@
                                     <li><a href="#">My Profile</a></li>
                                     <li><a href="#">Setting</a></li>
                                     <li class="divider"></li>
-                                    <li><a href="{{route('api.logout')}}">Log Out</a></li>
-                                </ul>
-                            </li>
+                                    <li>
+                                        <a href="{{ url('/logout') }}"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+											<i class="ace-icon fa fa-power-off"></i>
+                                            Logout
+                                        </a>
+
+                                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                                </li>
+							</ul>
+						</li>
                     </div>
                 </div>
             </nav>

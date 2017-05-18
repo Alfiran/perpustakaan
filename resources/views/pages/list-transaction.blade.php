@@ -18,9 +18,6 @@
                         <a class="btn btn-default submit" href={{route( 'page.list-transaction')}}>
                           <i class="pe-7s-refresh"></i>
                         </a>
-                        <a class="btn btn-default submit"href={{route( 'page.list-book')}}>
-                          <i class="pe-7s-mail-open-file"></i>
-                        </a>
                          <a class="btn btn-default submit"href={{route( 'page.list-book')}}>
                           <i class="pe-7s-print"></i>
                         </a>

@@ -25,53 +25,13 @@
                       <div class="col-md-12">
                         <div class="form-group">
                           <label>Class</label>
-                           <select id="idclass" class="form-control" id="idstatus" name="class">
-                              <option value="X RPL 1">X RPL 1</option>
-                              <option value="X RPL 2">X RPL 2</option>
-                              <option value="X RPL 3">X RPL 3</option>
-                              <option value="XI RPL 1">XI RPL 1</option>
-                              <option value="XI RPL 2">XI RPL 2</option>
-                              <option value="XI RPL 3">XI RPL 3</option>
-                              <option value="XII RPL 1">XII RPL 1</option>
-                              <option value="XII RPL 2">XII RPL 2</option>
-                              <option value="XII RPL 3">XII RPL 3</option>
-                              <option value="X TEI 1">X TEI 1</option>
-                              <option value="X TEI 2">X TEI 2</option>
-                              <option value="X TEI 3">X TEI 3</option>
-                              <option value="XI TEI 1">XI TEI 1</option>
-                              <option value="XI TEI 2">XI TEI 2</option>
-                              <option value="XI TEI 3">XI TEI 3</option>
-                              <option value="XII TEI 1">XII TEI 1</option>
-                              <option value="XII TEI 2">XII TEI 2</option>
-                              <option value="XII TEI 3">XII TEI 3</option>
-                              <option value="X TKJ 1">X TKJ 1</option>
-                              <option value="X TKJ 2">X TKJ 2</option>
-                              <option value="X TKJ 3">X TKJ 3</option>
-                              <option value="XI TKJ 1">XI TKJ 1</option>
-                              <option value="XI TKJ 2">XI TKJ 2</option>
-                              <option value="XI TKJ 3">XI TKJ 3</option>
-                              <option value="XII TKJ 1">XII TKJ 1</option>
-                              <option value="XII TKJ 2">XII TKJ 2</option>
-                              <option value="XII TKJ 3">XII TKJ 3</option>
-                              <option value="X TKR 1">X TKR 1</option>
-                              <option value="X TKR 2">X TKR 2</option>
-                              <option value="X TKR 3">X TKR 3</option>
-                              <option value="XI TKR 1">XI TKR 1</option>
-                              <option value="XI TKR 2">XI TKR 2</option>
-                              <option value="XI TKR 3">XI TKR 3</option>
-                              <option value="XII TKR 1">XII TKR 1</option>
-                              <option value="XII TKR 2">XII TKR 2</option>
-                              <option value="XII TKR 3">XII TKR 3</option>
-                              <option value="X TSM 1">X TSM 1</option>
-                              <option value="X TSM 2">X TSM 2</option>
-                              <option value="X TSM 3">X TSM 3</option>
-                              <option value="XI TSM 1">XI TSM 1</option>
-                              <option value="XI TSM 2">XI TSM 2</option>
-                              <option value="XI TSM 3">XI TSM 3</option>
-                              <option value="XII TSM 1">XII TSM 1</option>
-                              <option value="XII TSM 2">XII TSM 2</option>
-                              <option value="XII TSM 3">XII TSM 3</option>
-
+                           <select class="form-control" id="idclass" name="class" value="{{$member->class}}">
+                            @foreach($class as $c)
+                              @if($c == $member->class)
+                                <option value="{{$c}}" selected>{{$c}}</option>
+                              @endif
+                              <option value="{{$c}}">{{$c}}</option>
+                            @endforeach
                           </select>
                           </div>
                       </div>
