@@ -46,8 +46,8 @@
                       <br>
                       <button class="btn btn-default submit" id="btnSimpan">Simpan</button>
                       <button class="btn btn-default submit" id="btnSimpanKembali">Simpan & Kembali</button>
-                      <a class="btn btn-default submit" route={{route('page.list-book')}}>Kembali</a>
-                    </div>
+                      <a class="btn btn-default submit" href={{route('page.list-book')}}>Kembali</a>
+                     </div>
                 </div>
               </div>
             </div>

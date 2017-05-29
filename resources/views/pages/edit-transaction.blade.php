@@ -69,7 +69,7 @@
                     </div>
                     
                     <button class="btn btn-default submit" id="btnUpdate">Update</button>
-                    <a class="btn btn-default submit" href="list-transaksi">Kembali</a>
+                     <a class="btn btn-default submit" href={{route('page.list-transaction')}}>Kembali</a>
                                 </div>
                                 <hr>
 

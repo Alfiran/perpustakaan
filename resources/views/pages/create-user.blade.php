@@ -79,7 +79,7 @@
                       <br>
                       <button class="btn btn-default submit" id="btnSimpan">Simpan</button>
                       <button class="btn btn-default submit" id="btnSimpanKembali">Simpan & Kembali</button>
-                      <a class="btn btn-default submit" route={{route('page.list-user')}}>Kembali</a>
+                      <a class="btn btn-default submit" href={{route('page.list-user')}}>Kembali</a>
                     </div>
                     <hr>
                    

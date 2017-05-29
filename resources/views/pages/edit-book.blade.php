@@ -41,7 +41,7 @@
                     <div>
                       <br>
                       <button class="btn btn-default submit" id="btnUpdate">Update</button>
-                      <a class="btn btn-default submit" href="list-book">Kembali</a>
+                       <a class="btn btn-default submit" href={{route('page.list-book')}}>Kembali</a>
                     </div>
                     <hr>
 

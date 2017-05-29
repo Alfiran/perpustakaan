@@ -57,7 +57,7 @@
                     <div>
                       <br>
                       <button class="btn btn-default submit" id="btnUpdate">Update</button>
-                      <a class="btn btn-default submit" href="list-member">Kembali</a>
+                       <a class="btn btn-default submit" href={{route('page.list-member')}}>Kembali</a>
                     </div>
                     <hr>
                    
