@@ -26,7 +26,7 @@
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <p>
-                                     Profile
+                                     {{Auth::user()->name}}
                                         <b class="caret"></b>
                                     </p>
                                 </a>
