@@ -22,6 +22,7 @@
                       <div class="col-md-12">
                         <div class="form-group">
                           <label>Judul Buku</label>
+                          <input name="petugas" type="hidden" value="{{Auth::user()->name}}" />
                           <select class="form-control" id="idbooks" name="book_id">
                             @foreach($books as $book)
                               <option value="{{$book->id}}">{{$book->judul}}</option>

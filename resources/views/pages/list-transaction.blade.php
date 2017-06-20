@@ -18,15 +18,13 @@
                         <a class="btn btn-default submit" href={{route( 'page.list-transaction')}}>
                           <i class="pe-7s-refresh"></i>
                         </a>
-                         <a class="btn btn-default submit"href={{route( 'page.list-book')}}>
-                          <i class="pe-7s-print"></i>
-                        </a>
+                         
                       </div>
                     </div>
                     <div class="col-md-4 pull-right">
                       <form method="GET" action="{{route('page.list-transaction')}}"> 
                       <div class="form-group">
-                      <input type="text" class="form-control" name="search" placeholder="Pencarian berdasarkan Kode TRX..." value="">
+                      <input type="text" class="form-control" name="search" placeholder="Pencarian berdasarkan Judul Buku..." value="">
                     </div>
                   </form>
                     </div>
@@ -34,7 +32,6 @@
                   <div class="table-responsive table-full-width">
                     <table class="table table-hover table-striped">
                       <thead>
-                        <th>Kode TRX</th>
                         <th>Buku</th>
                         <th>Peminjam</th>
                         <th>Petugas</th>
@@ -45,7 +42,6 @@
                        <tbody>
                          @foreach ($transactions as $transaction)
                           <tr>
-                            <td>{{ $transaction->kode }}</td>
                             <td>{{ $transaction->book == null ? "null" : $transaction->book->judul }}</td>
                             <td>{{ $transaction->user == null ? "null" : $transaction->user->name }}</td>
                             <td>{{ $transaction->petugas }}</td>
