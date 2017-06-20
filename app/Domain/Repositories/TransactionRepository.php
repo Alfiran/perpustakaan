@@ -47,11 +47,15 @@ class TransactionRepository extends AbstractRepository implements TransactionInt
     public function paginate($limit = 10, $page = 1, array $column = ['*'], $field, $search = '')
     {
         // query to aql
+
         $transactions = $this->model
-        ->orderBy('created_at', 'desc')
-        ->where('judul', 'like', '%' . $search . '%')
-        ->paginate($limit);
-        
+            ->join('books', 'transactions.book_id', '=', 'books.id')
+            ->where(function ($query) use ($search) {
+                $query->where('books.judul', 'like', '%' . $search . '%');
+            })
+            ->orderBy('transactions.created_at','asc')
+            ->paginate($limit);
+
         return $transactions;
     }
 
