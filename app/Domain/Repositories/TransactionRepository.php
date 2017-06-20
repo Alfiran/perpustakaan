@@ -49,7 +49,7 @@ class TransactionRepository extends AbstractRepository implements TransactionInt
         // query to aql
         $transactions = $this->model
         ->orderBy('created_at', 'desc')
-        ->where('kode', 'like', '%' . $search . '%')
+        ->where('judul', 'like', '%' . $search . '%')
         ->paginate($limit);
         
         return $transactions;
@@ -65,9 +65,8 @@ class TransactionRepository extends AbstractRepository implements TransactionInt
         return parent::create([
             'book_id'    => e($data['book_id']),
             'user_id'   => e($data['user_id']),
-            'petugas' => \Auth::user()->name,
+            'petugas' => e($data['petugas']),
             'status'   => e($data['status']),
-            'kode'   => 'ANF-101',
             'expired_at'   =>  \Carbon\Carbon::now()->addDays(7),
         ]);
 
